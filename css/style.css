@@ -1,0 +1,1139 @@
+
+/* Reset de Margenes para inciar CSS y que ningun formato por defecto complique el diseño */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Importar Fonts de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');
+
+/* Seteo de tamaño base del Font para poder usar "rem" */
+html { 
+    font-size: 62.5%;
+}
+
+/* HEADER */
+/* Formato para todos los headers del sitio, se reutiliza el codigo para todas las paginas*/
+
+.header {
+    background-image: url('../media/photographerBanner_1980.jpg');
+    background-position: center;
+    height: 20vh;
+    grid-area: header;
+}
+
+.navHeader {
+    top: 0;
+    margin:auto;
+    grid-area: nav;
+}
+
+.navHeader ul {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: center;
+    text-transform: uppercase;
+    font-family:'Roboto', sans-serif;
+}
+
+.navHeader ul li{
+    background-color: black;
+    font-size: 1.5rem;
+    padding:1rem 1rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navHeader ul li a {
+    color: white;
+    padding:1rem;
+}
+
+.seccionPromos {
+    background-image: url('../media/bannerpromociones_1500.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    grid-area: promos;
+}
+
+.seccionPromos h1,.seccionPromos h2 {
+    position: absolute;
+    left: calc(100% - 800px);
+    top: calc(100% - 100px); 
+    text-align: center;
+    justify-content: end;
+    margin: auto;
+    text-transform: uppercase;
+    font-family:'Roboto', sans-serif;
+    font-size:x-large;
+    font-weight: bold;
+    color: black;
+}
+
+/* Index */
+
+.eventos, .estudio, .corporativo, .viajes, .cursos {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    height: 50rem;
+    font-size: 2rem;
+    color:white;
+    position: relative;
+    width: auto;
+}
+
+.eventos h2, .estudio h2, .corporativo h2, .viajes h2, .cursos h2 {
+    position:absolute;
+    color:white;
+    top: 50px;
+    font-family:'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 100px;
+    padding:20px;
+}
+
+.eventos img, .estudio img, .corporativo img, .viajes img, .cursos img {
+    width: 40vw;
+    height: auto;
+    border: solid 1rem white;
+    border-radius: 30px;
+}
+
+.eventos {
+    grid-area: eventos;
+}
+
+.estudio {
+    grid-area: estudio;
+}
+
+.corporativo {
+    grid-area: corporativo;
+}
+
+.viajes {
+    grid-area: viajes;
+}
+
+.cursos {
+    grid-area: cursos;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    background-color: black;
+    font-family:'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: justify;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-evenly;  
+    color:gray;
+    grid-area: footer;
+}
+
+.containerFooterEnlaces {
+    display: block;
+}
+
+.containerFooterEnlacesHeader {
+    color:white;
+    padding-bottom: 1rem;
+}
+
+.containerFooterEnlaces__list li a {
+    color: gray;
+}
+
+.containerFooterEnlaces__itemActivo {
+    font-weight: bold;
+}
+
+.containerFooterSocial {
+    justify-content:space-evenly; 
+}
+
+.containerFooterSocialHeader {
+    color: white;
+}
+
+.iconosFooter {
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+/* GRID */
+.parentGrid {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "promos promos"
+    "eventos estudio"
+    "corporativo viajes"
+    "cursos cursos"
+    "footer footer"
+    ;
+    background-image: url('../media/background.jpg');
+}
+
+/* RESPONSIVE CON MEDIA QUERY */
+
+/* tablet */
+
+@media (min-width:501px) and (max-width:1000px) {
+    .parentGrid {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "promos promos"
+        "eventos estudio"
+        "corporativo viajes"
+        "cursos cursos"
+        "footer footer"
+    }
+
+    .header {
+        height: 20vh;
+    }
+
+    .header img {
+        width: 50vw;
+    }
+    
+    .navHeader ul li{
+        font-size: 1rem;
+    }
+
+    .seccionPromos {
+        background-image: url('../media/bannerpromociones_800.jpg');
+        height: 30vh;
+    }
+
+    .seccionPromos h1,.seccionPromos h2 {
+        left: calc(100% - 400px);
+        top: calc(100% - 60px); 
+        font-size:medium;
+    }
+
+    .eventos, .estudio, .corporativo, .viajes, .cursos {
+        height: 20rem;
+    }
+
+    .eventos h2, .estudio h2, .corporativo h2, .viajes h2, .cursos h2 {
+        top: 20px;
+        font-size: 50px;
+        padding:10px;
+    }
+
+    .eventos img, .estudio img, .corporativo img, .viajes img, .cursos img {
+        width: 30vw;
+        height: auto;
+        border: solid 0.5rem white;
+        border-radius: 15px;
+    }
+    
+    .containerFooterEnlaces {
+        display: none;
+    }
+
+    .containerFooterSocial {
+        flex-direction: column;
+        justify-items: center; 
+    }
+
+    .containerFooterSocial h3 {
+        text-align: center;
+    }
+
+}
+
+/* movil diseñado para pantallas 320 a 500px*/
+
+@media (max-width:500px) {
+    .parentGrid {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "promos"
+        "eventos"
+        "estudio"
+        "corporativo"
+        "viajes"
+        "cursos"
+        "footer"
+    }
+
+    .header {
+        background-image:gray;
+        height: 35vh;
+        width: auto;
+    }
+
+    .header img {
+        width: 70vw;
+        height: auto;
+        text-align: center;
+    }
+
+    .navHeader ul {
+        flex-direction: column;
+    }
+
+    .navHeader ul li{
+        font-size: 1rem;
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+
+    .seccionPromos {
+        background-image: url('../media/bannerpromociones_500px.jpg');
+        height: 15vh;
+    }
+
+    .seccionPromos h1,.seccionPromos h2 {
+        left: calc(100% - 300px);
+        top: calc(100% - 20px); 
+        font-size:small;
+    }
+
+    .eventos, .estudio, .corporativo, .viajes, .cursos {
+        height: 20rem;
+    }
+
+    .eventos h2, .estudio h2, .corporativo h2, .viajes h2, .cursos h2 {
+        top: 20px;
+        font-size: 50px;
+        padding:10px;
+    }
+
+    .eventos img, .estudio img, .corporativo img, .viajes img, .cursos img {
+        width: 35vh;
+        height: auto;
+        border: solid 0.5rem white;
+        border-radius: 15px;
+    }
+    
+    .footer {
+        font-size: 1rem; 
+    }
+
+    .containerFooterEnlaces {
+        display: none;
+    }
+
+    .containerFooterSocial {
+        flex-direction: column;
+        justify-items: center; 
+    }
+
+    .containerFooterSocial h3 {
+        text-align: center;
+    }
+
+}
+
+/* QUINES SOMOS */
+
+.sectionQuienesSomosHeader {
+    font-family:'Roboto', sans-serif;
+    font-size: 3rem;
+    height: 10vh;
+    text-align: center;
+    color: white;
+    width: auto;
+    margin-top: 10vh;
+    grid-area: sectionQuienesSomosHeader;
+}
+
+.sectionQuienesSomos {
+    margin-left:5px;
+    padding-top: 100px;
+    padding-bottom: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    grid-area: sectionQuienesSomos;
+}
+
+.imageQuienesSomos {
+    margin-right:5px;
+    border: solid 1rem white ;
+    border-radius: 30px 5px 5px 30px;
+    height: 400px;
+    width: auto;
+}
+
+.quienesSomosParrafo {
+    margin-right:5px;
+    font-family:'Roboto', sans-serif;
+    font-size: 2.5rem;
+    text-align: wrap;
+    color: white;
+    border: solid 1rem white ;
+    border-radius: 5px 30px 30px 5px;
+    height: 400px;
+    width: 300px;
+}
+
+.parentGridQuienesSomos {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "promos promos"
+    "sectionQuienesSomosHeader sectionQuienesSomosHeader"
+    "sectionQuienesSomos sectionQuienesSomos"
+    "footer footer"
+    ;
+    background-image: url(../media/background_010.jpg);
+}
+
+/* ESTUDIA FOTOGRAFIA */
+
+.parentGridEstudiaFotogrfia {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "promos promos"
+    "sectionQuienesSomosHeader sectionQuienesSomosHeader"
+    "sectionQuienesSomos sectionQuienesSomos"
+    "footer footer"
+    ;
+    background-image: url(../media/background_6.jpg);
+}
+
+/* QUIENES SOMOS / ESTUDIA FOTOGRAFIA TABLET */
+
+@media (min-width:501px) and (max-width:1000px) {
+    .parentGridQuienesSomos, .parentGridEstudiaFotogrfia {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "promos promos"
+        "sectionQuienesSomosHeader sectionQuienesSomosHeader"
+        "sectionQuienesSomos sectionQuienesSomos"
+        "footer footer"
+        ;
+    }
+
+    .sectionQuienesSomos {
+        padding-top: 50px;
+        padding-bottom: 10vh;
+    }
+
+    .imageQuienesSomos {
+        border: solid 0.5rem white ;
+        height: 200px;
+    }
+
+    .quienesSomosParrafo {
+        font-size: 1.5rem;
+        border: solid 0.5rem white ;
+        height: 200px;
+        width: 200px;
+    }
+
+}
+
+/* QUIENES SOMOS / ESTUDIA FOTGRAFIA CELULAR */
+
+/* movil diseñado para pantallas 320 a 500px*/
+
+@media (max-width:500px) {
+    .parentGridQuienesSomos, .parentGridEstudiaFotogrfia {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "promos"
+        "sectionQuienesSomosHeader"
+        "sectionQuienesSomos"
+        "footer"
+        ;
+    }
+
+    .sectionQuienesSomosHeader {
+        font-size: 2rem;
+        height: 5vh;
+        width: auto;
+    }
+
+    .sectionQuienesSomos {
+        padding-top: 50px;
+        padding-bottom: 10vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageQuienesSomos {
+        border: solid 0.5rem white ;
+        border-radius: 30px 30px 5px 5px;
+        height: 200px;
+        width: 250px
+    }
+
+    .quienesSomosParrafo {
+        font-size: 2rem;
+        border: solid 0.5rem white ;
+        border-radius: 5px 5px 30px 30px;
+        height: 300px;
+        width: 250px
+    }
+
+}
+
+/* NUESTROS SERVICIOS */
+
+.nuestrosServiciosHeader {
+    font-family:'Roboto', sans-serif;
+    font-size: 3rem;
+    height: 10vh;
+    text-align: center;
+    color: white;
+    width: auto;
+    margin-top: 10vh;
+    grid-area: nuestrosServiciosHeader;
+}
+
+.nuestrosServiciosTodos1 {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 60px;
+    grid-area: nuestrosServiciosTodos1;
+}
+
+.nuestrosServiciosTodos2 {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20vh;
+    grid-area: nuestrosServiciosTodos2;
+}
+
+.wrapNuestrosServicios {
+    display: inline-block;
+    position: relative
+}
+
+.wrapNuestrosServicios h3 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family:'Roboto', sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+.imageServicios {
+    margin-bottom:1px;
+    border: solid 1rem white ;
+    border-radius: 30px 30px 5px 5px;
+    height: 300px;
+    width: 300px;
+}
+
+.parrafoServicios {
+    margin-top:1px;
+    text-align: center;
+    font-family:'Roboto', sans-serif;
+    font-size: 2rem;
+    color:white;
+    border: solid 1rem white ;
+    border-radius: 5px 5px 30px 30px;
+    height: 250px;
+    width: 300px;
+}
+
+.parentGridNuestrosServicios {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "promos promos"
+    "nuestrosServiciosHeader nuestrosServiciosHeader"
+    "nuestrosServiciosTodos1 nuestrosServiciosTodos1"
+    "nuestrosServiciosTodos2 nuestrosServiciosTodos2"
+    "footer footer"
+    ;
+    background-image: url(../media/background_9.jpg);
+}
+
+/* NUESTROS SERVICIOS TABLET */
+
+@media (min-width:501px) and (max-width:1000px) {
+    .parentGridNuestrosServicios {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "promos promos"
+        "nuestrosServiciosHeader nuestrosServiciosHeader"
+        "nuestrosServiciosTodos1 nuestrosServiciosTodos1"
+        "nuestrosServiciosTodos2 nuestrosServiciosTodos2"
+        "footer footer"
+        ;
+    }
+    
+    .nuestrosServiciosTodos1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .wrapNuestrosServicios h3 {
+        top: 20px;
+        left: 20px;
+        font-size: 2rem;
+    }
+    
+    .imageServicios {
+        border: solid 0.5rem white ;
+        height: 150px;
+        width: 150px;
+    }
+    
+    .parrafoServicios {
+        border: solid 0.5rem white ;
+        font-size: 1.5rem;
+        height: 250px;
+        width: 150px;
+    }
+}
+    
+    /* NUESTROS SERVICIOS CELULAR */
+    
+    /* movil diseñado para pantallas 320 a 500px*/
+    
+@media (max-width:500px) {
+    .parentGridQuienesSomos {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "promos"
+        "nuestrosServiciosHeader"
+        "nuestrosServiciosTodos1"
+        "nuestrosServiciosTodos2"
+        "footer footer"
+        ;
+    }
+
+    .nuestrosServiciosHeader {
+        font-size: 2rem;
+    }
+
+    .nuestrosServiciosTodos1 {
+        padding-top: 30px;
+        padding-bottom: 0px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .nuestrosServiciosTodos2 {
+        padding-top: 0px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .wrapNuestrosServicios h3 {
+        top: 30px;
+        font-size: 2rem;
+    }
+    
+    .imageServicios {
+        margin-top: 20px;
+        border: solid 0.5rem white ;
+        height: 150px;
+        width: 150px;
+    }
+    
+    .parrafoServicios {
+        border: solid 0.5rem white ;
+        font-size: 1.5rem;
+        height: 250px;
+        width: 150px;
+    }
+
+}
+
+/* PREGUNTAS FRECUENTES */
+
+.sectionPreguntasFrecuentesHeader {
+    font-family:'Roboto', sans-serif;
+    font-size: 3rem;
+    height: 10vh;
+    text-align: center;
+    color: black;
+    width: auto;
+    margin-top: 10vh;
+    grid-area: sectionPreguntasFrecuentesHeader;
+}
+
+.mainPreguntasFrecuentes {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    font-family:'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    grid-area: mainPreguntasFrecuentes;
+}
+
+.boxPreguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boxPreguntasFrecuentes {
+    border: dotted thin black;
+    width: 900px;
+    height: auto;   
+}
+
+.boxPreguntasFrecuentesUltima {
+    color:red;
+    font-size: 4rem;  
+}
+
+.parentGridPreguntasFrecuentes {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "promos promos"
+    "sectionPreguntasFrecuentesHeader sectionPreguntasFrecuentesHeader"
+    "mainPreguntasFrecuentes mainPreguntasFrecuentes"
+    "footer footer"
+    ;
+    background-image: url(../media/preguntas_frecuentes_background.jpg);
+}
+
+    /* PREGUNTAS FRECUENTES TABLET */
+
+@media (min-width:501px) and (max-width:1000px) {
+    .parentGridPreguntasFrecuentes {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "promos promos"
+        "sectionPreguntasFrecuentesHeader sectionPreguntasFrecuentesHeader"
+        "mainPreguntasFrecuentes mainPreguntasFrecuentes"
+        "footer footer"
+        ;
+    }
+
+    .sectionPreguntasFrecuentesHeader {
+        font-size: 2rem;
+    }
+    
+    .sectionPreguntasFrecuentesHeader img {
+        width: 400px;
+    }
+
+    .mainPreguntasFrecuentes {
+        margin-top: 15vh;
+        font-size: 1.5rem;
+    }
+    
+    .boxPreguntasFrecuentes {
+        width: 500px;
+    }
+    
+    .boxPreguntasFrecuentesUltima {
+        color:red;
+        font-size: 3rem;  
+    }    
+
+}
+    
+    /* PREGUNTAS FRECUENTES CELULAR */
+    
+    /* movil diseñado para pantallas 320 a 500px*/
+    
+    @media (max-width:500px) {
+    .parentGridPreguntasFrecuentes {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "promos"
+        "sectionPreguntasFrecuentesHeader"
+        "mainPreguntasFrecuentes"
+        "footer"
+        ;
+    }
+
+    .sectionPreguntasFrecuentesHeader {
+        font-size: 1.5rem;
+    }
+    
+    .sectionPreguntasFrecuentesHeader img {
+        width: 200px;
+    }
+
+    .mainPreguntasFrecuentes {
+        margin-top: 5vh;
+        font-size: 1rem;
+    }
+    
+    .boxPreguntasFrecuentes {
+        width: 300px;
+    }
+    
+    .boxPreguntasFrecuentesUltima {
+        color:red;
+        font-size: 1.5rem;  
+    }   
+
+}
+
+/* CONTACTO */
+
+.paddingForm {
+    padding-bottom: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: formulario;
+}
+
+.paddingForm h1 {
+    font-family:'Roboto', sans-serif;
+    font-size: 5rem;
+    height: 10vh;
+    text-align: center;
+    color: black;
+    width: auto;
+    margin-top: 10vh;
+    grid-area: contactoheader;
+}
+
+.containerContacto{
+    padding-top: 40px;
+    padding-left:40px;
+    font-family:'Roboto', sans-serif;
+    display: inline-block;
+    position:relative;
+    align-items: center;
+    text-align: left;
+    border: solid thin black;
+    border-radius:20px;
+    background-color: bisque;
+    width: 600px;
+    height: 800px;
+    font-size: 2rem;
+}
+
+.contenedorForm {
+    position:absolute;
+    left:100px;
+}
+
+.containerContactoLabel {
+    font-size: 2rem;
+    display:block;
+}
+
+.inputBoxesForm {
+    padding:10px;
+    border-radius:10px;
+    box-shadow: 2px;
+}
+
+.name{
+    position:absolute;
+    top: 50px;
+}
+
+.lastname {
+    position:absolute;
+    top: 50px;
+    left:250px;
+}
+
+.opcionCanal {
+    position:absolute;
+    top: 150px;
+    width: 400px;
+}
+
+.radioE {
+    position:absolute;
+    top: 200px;
+    width: 50px;
+    font-size: 2rem;
+}
+
+.radioM {
+    position:absolute;
+    top: 200px; 
+    left: 150px;  
+    width: 50px; 
+    font-size: 2rem;
+}
+
+.emailInput {
+    position:absolute;
+    top: 250px;     
+}
+
+.movilInput {
+    position:absolute;
+    top: 250px;  
+    left:250px;   
+}
+
+.asunto {
+    position:absolute;
+    top: 350px;  
+}
+
+.mensaje {
+    position:absolute;
+    top: 450px;  
+}
+
+.cleanButton {
+    background-color: brown;
+    color: white;
+    font-size: 3rem;
+    width: 120px;
+    height: 40px;
+}
+
+.sendButton {
+    background-color: green;
+    color: white;
+    font-size: 3rem;
+    width: 120px;
+    height: 40px;
+}
+
+.limpiar {
+    position:absolute;
+    top: 650px;  
+}
+
+.enviar {
+    position:absolute;
+    top: 650px;  
+    left:150px; 
+}
+
+.disclaimer {
+    position:absolute;
+    width: 450px;
+    top: 700px;  
+}
+
+.parentGridContacto {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "promos promos"
+    "contactoheader contactoheader"
+    "formulario formulario"
+    "footer footer"
+    ;
+    background-image: url(../media/preguntas_frecuentes_background.jpg);
+}
+
+    /* CONTACTO TABLET */
+
+@media (min-width:501px) and (max-width:1000px) {
+    .parentGridContacto {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "promos promos"
+        "contactoheader contactoheader"
+        "formulario formulario"
+        "footer footer"
+        ;
+    }
+    
+    .containerContacto{
+        width: 400px;
+        height: 640px;
+        font-size: 2rem;
+    }
+    
+    .contenedorForm {
+        left:20px;
+    }
+        
+    .name{
+        top: 5px;
+    }
+    
+    .lastname {
+        top: 5px;
+        left:210px;
+    }
+    
+    .opcionCanal {
+        top: 105px;
+    }
+    
+    .radioE {
+        top: 155px;
+    }
+    
+    .radioM {
+        top: 155px; 
+        left: 150px;  
+    }
+    
+    .emailInput {
+        top: 205px;     
+    }
+    
+    .movilInput {
+        top: 205px;  
+        left: 210px;   
+    }
+    
+    .asunto {
+        top: 305px;  
+    }
+    
+    .mensaje {
+        top: 405px;  
+    }
+    
+    .limpiar {
+        top: 530px;  
+        left:270px
+    }
+    
+    .enviar {
+        top: 430px;  
+        left:270px; 
+    }
+    
+    .disclaimer {
+        font-size: 1.5rem;
+        width: 450px;
+        top: 600px;  
+    }
+
+}
+
+/* CONTACTO CELULAR */
+
+/* movil diseñado para pantallas 320 a 500px*/
+
+@media (max-width:500px) {
+    .parentGridContacto {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "promos"
+        "contactoheader"
+        "formulario"
+        "footer"
+        ;
+    }
+
+
+    .containerContacto{
+        width: 240px;
+        height: 1000px;
+        font-size: 2rem;
+    }
+    
+    .contenedorForm {
+        left:45px;
+    }
+        
+    .name{
+        top: 5px;
+    }
+    
+    .lastname {
+        top: 105px;
+        left:0px;
+    }
+    
+    .opcionCanal {
+        top: 205px;
+        left: -25px;
+        width: 250px;
+        text-align: wrap;
+    }
+    
+    .radioE {
+        top: 270px;
+    }
+    
+    .radioM {
+        top: 270px; 
+        left: 150px;  
+    }
+    
+    .emailInput {
+        top: 330px;     
+    }
+    
+    .movilInput {
+        top: 430px;  
+        left: 0px;   
+    }
+    
+    .asunto {
+        top: 530px;  
+    }
+    
+    .mensaje {
+        top: 630px;  
+        left: -25px;
+    }
+    
+    .limpiar {
+        top: 930px;  
+        left:35px
+    }
+    
+    .enviar {
+        top: 870px;  
+        left:35px
+    }
+    
+    .disclaimer {
+        font-size: 1.5rem;
+        width: 250px;
+        text-align: wrap;
+        top: 820px;  
+        left: -30px;
+    }
+
+}

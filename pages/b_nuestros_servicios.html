@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<!-- Cambio el idioma a español -->
+<html lang="es">
+
+<!-- Agrego Metadata adicional, "title" Nombre a aparecer en la solapa del navegador, 
+agrego name para que mejore la busqueda, descripcion, autor y logo Link Icon peronsalizado de la pagina -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Fotografia, Estudio de Fotografia, Fotografo, Casamientos, Eventos">
+    <meta name="description" content="Este es el sitio del Estudio Fotografico PMU. En el encontrara la oferta de servicios e informacion importante sobre la empresa">
+    <meta name="autor" content="Pablo Ulled">
+    <title>Estudio Fotografico PMU - Nuestros Servicios</title>
+    <link rel="Icon" href="../media/PMU ICON.ico">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- Body lleva el logo de la empresa (que ademas es link a la pagina index) y el menu principal de navegacion  -->
+<body class="parentGridNuestrosServicios">
+
+    <header class="header">
+        <div class="logo">
+            <a href=index.html> <img src="../media/logo_resize.png" alt="Estudio Fotografico PMU"></a>
+        </div>
+        <nav class="navHeader">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/a_quienes_somos.html">Quienes Somos</a></li>
+                <li id=liActivo><a class= "itemActivo" href="../pages/b_nuestros_servicios.html">Nuestros Servicios</a></li>
+                <li><a href="../pages/c_estudia_fotografia.html">Estudia Fotografia</a></li>
+                <li><a href="../pages/d_preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="../pages/e_contacto.html">Contacto</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <!-- Seccion de Novedades y Promociones, 3 imagenes que deslizan intermitentemente. Las
+    imagenes tambien tienen title cuando se pasa el mouse por encima (hoverover) -->
+    <main class="seccionPromos">
+        <h2>Novedades y Promociones</h2>
+        <!-- <img src="media/bannerpromociones_resize.jpg" alt="Promocion 1" title="Promocion 1"> -->
+        <!-- <img src="media/Nikon.jpg" alt="Promocion 2" title="Promocion 2">
+        <img src="media/Nikon.jpg" alt="Promocion 3" title="Promocion 3"> -->
+    </main>
+    
+    <!-- Seccion explicativa de los servicos que ofrece la empresa Una imagen
+    para cada servicio y un parrafo explicativo -->
+    <section class="nuestrosServiciosHeader">
+        <h1>Nuestros Servicios</h1>
+    </section>
+    
+    <section class="nuestrosServiciosTodos1">
+        <div class="wrapNuestrosServicios">
+            <h3>Eventos</h3>
+            <img class="imageServicios" src="../media/bodas.jpeg" alt="Eventos" title="Eventos">
+            <p class="parrafoServicios">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, culpa impedit mollitia distinctio, voluptas explicabo temporibus tenetur cum, modi nemo repudiandae natus laborum deserunt quaerat voluptate ducimus dolorum dignissimos repellendus?</p>
+        </div>
+        <div class="wrapNuestrosServicios">
+            <h3>Estudio</h3>
+            <img class="imageServicios" src="../media/estudio.jpg" alt="Estudio" title="Estudio">
+            <p class="parrafoServicios">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, culpa impedit mollitia distinctio, voluptas explicabo temporibus tenetur cum, modi nemo repudiandae natus laborum deserunt quaerat voluptate ducimus dolorum dignissimos repellendus?</p>
+        </div>
+        <div class="wrapNuestrosServicios">
+            <h3>Corporativo</h3>
+            <img class="imageServicios" src="../media/eventos_empresariales.webp" alt="Corporativo" title="Corporativo">
+            <p class="parrafoServicios">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, culpa impedit mollitia distinctio, voluptas explicabo temporibus tenetur cum, modi nemo repudiandae natus laborum deserunt quaerat voluptate ducimus dolorum dignissimos repellendus?</p>
+        </div>
+    </section>
+
+    <section class="nuestrosServiciosTodos2" >
+        <div class="wrapNuestrosServicios">
+            <h3>Viajes</h3>
+            <img class="imageServicios" src="../media/fotonoticia_20150720085814_1200.jpg" alt="Viajes" title="Viajes">
+            <p class="parrafoServicios">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, culpa impedit mollitia distinctio, voluptas explicabo temporibus tenetur cum, modi nemo repudiandae natus laborum deserunt quaerat voluptate ducimus dolorum dignissimos repellendus?</p>
+        </div>
+        <div class="wrapNuestrosServicios">
+            <h3>Cursos</h3>
+            <img class="imageServicios" src="../media/20235337-group-smiling-high-school-students-giving-thumbs-up.webp" alt="Cursos" title="Cursos">
+            <p class="parrafoServicios">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, culpa impedit mollitia distinctio, voluptas explicabo temporibus tenetur cum, modi nemo repudiandae natus laborum deserunt quaerat voluptate ducimus dolorum dignissimos repellendus?</p>
+        </div>
+    </section>  
+
+    <!-- En el Footer nuevamente se agregan los links para que no se pierdan de vista los del header y
+    se agregan los links a canales de difusion en redes sociales y otras formas de comunicacion -->
+    <footer class="footer">
+        <div class="containerFooterEnlaces">
+            <h3 class="containerFooterEnlacesHeader">Enlaces</h3>
+            <ul class="containerFooterEnlaces__list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/a_quienes_somos.html">Quienes Somos</a></li>
+                <li><a class="containerFooterEnlaces__itemActivo" href="../pages/b_nuestros_servicios.html">Nuestros Servicios</a></li>
+                <li><a href="../pages/c_estudia_fotografia.html">Estudia Fotografia</a></li>
+                <li><a href="../pages/d_preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="../pages/e_contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <!-- Links de navegacion externa -->
+        <div class="containerFooterSocial">
+            <h3 class="containerFooterSocialHeader">Tambien podes seguirnos</h3>
+            <a href="https://instagram.com" target="_blank">
+                <span class="iconify iconosFooter" data-icon="entypo-social:instagram-with-circle"></span>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <span class="iconify iconosFooter" data-icon="logos:twitter"></span>
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <span class="iconify iconosFooter" data-icon="logos:facebook"></span>
+            </a>
+            <a href="https://whatsapp.com" target="_blank">
+                <span class="iconify iconosFooter" data-icon="logos:whatsapp-icon"></span>
+            </a>
+            <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+        </div>
+    </footer>
+</body>
+
+</html>
