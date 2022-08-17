@@ -40,17 +40,28 @@ html {
     font-family:'Roboto', sans-serif;
 }
 
-.navHeader ul li{
+.navHeader ul li {
     background-color: black;
     font-size: 1.5rem;
     padding:1rem 1rem;
     margin-left: 5px;
     margin-right: 5px;
+    transition: border, background-color 0.2s;
+}
+
+.navHeader ul li:hover {
+    border: solid 1px  black;
+    background-color: white;
 }
 
 .navHeader ul li a {
     color: white;
     padding:1rem;
+    transition: color 0.2;
+}
+
+.navHeader ul li a:hover {
+    color: black;
 }
 
 .seccionPromos {
@@ -109,6 +120,11 @@ html {
     height: auto;
     border: solid 1rem white;
     border-radius: 30px;
+    transition: width 0.2s;
+}
+
+.eventos img:hover, .estudio img:hover, .corporativo img:hover, .viajes img:hover, .cursos img:hover {
+    width: 41vw;
 }
 
 .eventos {
@@ -157,6 +173,11 @@ html {
 
 .containerFooterEnlaces__list li a {
     color: gray;
+    transition: color 0.3s;
+}
+
+.containerFooterEnlaces__list li a:hover {
+    color: white;
 }
 
 .containerFooterEnlaces__itemActivo {
@@ -241,12 +262,16 @@ html {
     }
 
     .eventos img, .estudio img, .corporativo img, .viajes img, .cursos img {
-        width: 30vw;
+        width: 25vw;
         height: auto;
         border: solid 0.5rem white;
         border-radius: 15px;
     }
     
+    .eventos img:hover, .estudio img:hover, .corporativo img:hover, .viajes img:hover, .cursos img:hover {
+        width: 26vw;
+    }
+
     .containerFooterEnlaces {
         display: none;
     }
@@ -280,7 +305,7 @@ html {
 
     .header {
         background-image:gray;
-        height: 35vh;
+        height: 40vh;
         width: auto;
     }
 
@@ -328,6 +353,10 @@ html {
         border-radius: 15px;
     }
     
+    .eventos img:hover, .estudio img:hover, .corporativo img:hover, .viajes img:hover, .cursos img:hover {
+        width: 34vh;
+    }
+
     .footer {
         font-size: 1rem; 
     }
