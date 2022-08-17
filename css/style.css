@@ -871,9 +871,9 @@ html {
     position:relative;
     align-items: center;
     text-align: left;
-    border: solid thin black;
+    border: solid 2px black;
     border-radius:20px;
-    background-color: bisque;
+    background-image: radial-gradient(#d9d9d9,#595959);
     width: 600px;
     height: 800px;
     font-size: 2rem;
@@ -1098,6 +1098,7 @@ html {
         width: 240px;
         height: 1000px;
         font-size: 2rem;
+        background-image: linear-gradient(#595959,#d9d9d9);
     }
     
     .contenedorForm {
