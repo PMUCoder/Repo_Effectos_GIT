@@ -744,9 +744,45 @@ html {
     height: auto;   
 }
 
+@keyframes animate {
+    0% {letter-spacing: normal;}
+    25% {letter-spacing: 2px;}
+    50% {letter-spacing: 4px;}
+    75% {letter-spacing: 2px;}
+    100%{letter-spacing: normal;}
+    }
+
+.Q1:hover {
+    background-color:#cccccc;
+    font-weight: bold;
+    animation-name: animate;
+    animation-iteration-count:initial;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+.Q2 {
+    transition: font-weight, background-color;
+}
+
+.Q2:hover {
+    font-weight: bold;
+    background-color:#cccccc;
+}
+
 .boxPreguntasFrecuentesUltima {
     color:red;
     font-size: 4rem;  
+}
+
+.boxPreguntasFrecuentesUltimaLink {
+    color:red;
+    font-size: 4rem;  
+    transition: color 0.2s;
+}
+
+.boxPreguntasFrecuentesUltimaLink:hover {
+    color:blue;
 }
 
 .parentGridPreguntasFrecuentes {
@@ -795,10 +831,12 @@ html {
     }
     
     .boxPreguntasFrecuentesUltima {
-        color:red;
         font-size: 3rem;  
     }    
 
+    .boxPreguntasFrecuentesUltimaLink {
+        font-size: 3rem;  
+    }
 }
     
     /* PREGUNTAS FRECUENTES CELULAR */
@@ -836,9 +874,12 @@ html {
     }
     
     .boxPreguntasFrecuentesUltima {
-        color:red;
         font-size: 1.5rem;  
     }   
+
+    .boxPreguntasFrecuentesUltimaLink {
+        font-size: 1.5rem;  
+    }
 
 }
 
